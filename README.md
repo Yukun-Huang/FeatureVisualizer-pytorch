@@ -4,6 +4,8 @@ An implementation of feature visualizer for pytorch tensor, based on Matplotlib.
 ## Usage
 
 ```
+from feature_visualizer import FeatureVisualizer
+
 V = FeatureVisualizer()
 ```
 
