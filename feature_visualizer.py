@@ -45,12 +45,12 @@ class FeatureVisualizer:
             f = F.interpolate(f, size=self.upsample_size, mode=self.upsample_type, align_corners=False)
         else:
             raise NotImplementedError
-        return f.squeeze().cpu().numpy()
+        return f.squeeze().detach().cpu().numpy()
 
     def _transform_rgb(self, x, norm):
         x = self._check(x)
         x = F.interpolate(x, size=self.upsample_size, mode=self.upsample_type, align_corners=False)
-        x = x.squeeze(dim=0).cpu().numpy().transpose((1, 2, 0))
+        x = x.squeeze(dim=0).detach().cpu().numpy().transpose((1, 2, 0))
         if norm:
             x = self._recover(x)
         return x
