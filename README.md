@@ -1,6 +1,14 @@
 # FeatureVisualizer-pytorch
 An implementation of feature visualizer for pytorch tensor, based on Matplotlib.
 
+## Prerequisites
+
+- NumPy
+
+- Matplotlib
+
+- PyTorch 0.4.1+
+
 ## Usage
 
 ```
