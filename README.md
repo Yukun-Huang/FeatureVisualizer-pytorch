@@ -9,6 +9,8 @@ An implementation of feature visualizer for pytorch tensor, based on Matplotlib.
 
 - PyTorch 0.4.1+
 
+- TorchVision 0.2.1+
+
 ## Usage
 
 ### Preparation
