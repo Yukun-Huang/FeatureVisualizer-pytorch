@@ -37,7 +37,7 @@ V.save_image(img, save_path='demo/image.jpg')
 ```
 V.save_both(img, f, 'demo/demo.jpg')
 ```
-<img src="https://github.com/hyk1996/FeatureVisualizer-pytorch/blob/master/demo/demo.jpg" height="200" width="400">
+<img src="https://github.com/hyk1996/FeatureVisualizer-pytorch/blob/master/demo/demo.jpg" height="200" width="300">
 
 Check **demo.py** for more details.
 
