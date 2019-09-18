@@ -32,6 +32,8 @@ class FeatureVisualizer:
         return x
 
     def __recover_torch(self, x):
+        if x.is_cuda:
+            x = x.detach().cpu()
         return x * self.t_std + self.t_mean
 
     def __normalize(self, x):
