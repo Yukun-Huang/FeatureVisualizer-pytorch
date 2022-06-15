@@ -23,9 +23,15 @@ class FeatureVisualizer:
         assert x.dim() == 3 or x.dim() == 4, 'Input should be 3D or 4D tensor.'
     
     @staticmethod
-    def _normalize(x):
-        max_val, min_val = torch.max(x), torch.min(x)
-        x = (x - min_val) / (max_val - min_val)
+    def _normalize(x, mode='spatial', p=2):
+        assert x.size(0) == 1
+        if mode == 'minmax':
+            max_val, min_val = torch.max(x), torch.min(x)
+            x = (x - min_val) / (max_val - min_val)
+        elif mode == 'spatial':
+            x = x.div(torch.norm(x.flatten(), p=p, dim=0))
+        elif mode == 'abs':
+            x = torch.abs(x)
         return x
 
     def _recover_numpy(self, x):
