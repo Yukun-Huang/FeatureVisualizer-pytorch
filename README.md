@@ -16,4 +16,4 @@ An implementation of feature visualizer for pytorch tensor.
 ```
 python demo.py
 ```
-<img src="https://github.com/hyk1996/FeatureVisualizer-pytorch/blob/master/demo/demo.jpg" height="154" width="550">
+<img src="https://github.com/hyk1996/FeatureVisualizer-pytorch/blob/master/demo/demo.jpg" height="210" width="750">
